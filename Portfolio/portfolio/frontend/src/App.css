@@ -1,0 +1,382 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* Add fonts from the app's server 
+    @font-face {                
+      font-family: 'FontName';
+      src: url('FontName.woff2') format('woff2');
+    } 
+    ...or hosted services like Google Fonts 
+    @import url(//fonts.googleapis.com/css?family=Font+Name);
+  */
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@500&display=swap');
+  /* @import 'node_modules/modern-normalize/modern-normalize.css'; */
+        /* npm install modern-normalize
+          Resets elements for browser consistency.  
+          https://www.npmjs.com/package/modern-normalize
+        */         
+  
+  /* Component-specific stylesheets, if any. 
+    @import "component1.css";   
+  */
+
+/*   ----- Variables  -----  */
+:root {
+    --light_blue:#ADC5D9;
+    --med_blue:#7E9ABF99;
+    --dark_blue:#3873A695;
+    --rock_accent:#384950;
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {} or :root {} */
+    background-color:;
+    background-image: url(images/Hawaii-Background.jpg);
+    background-size: cover;
+    color: var(--rock_accent);
+    font-family: 'Open Sans', sans-serif; /* Define with at least one font name and its related generic family name.*/
+    margin: 0 auto;
+    padding: 3%;
+    max-width: 1200px;
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header{
+    text-align:center;
+    background-color: var(--dark_blue);
+    font-family: 'Roboto', sans-serif;
+    margin:0 auto;
+    border-radius:10px 10px 10px 10px;
+    padding:1.5%; 
+  }
+  header img {
+    width:3%;
+  }
+  main {margin:0;}
+  section {
+    background-color:var(--med_blue);
+    border-radius:10px 10px 10px 10px;
+    padding:3%;
+    margin-bottom: 1%;
+  }
+  article {
+    background-color:var(--light_blue);
+    border-radius:10px 10px 10px 10px;
+    margin-bottom: 1%;
+    padding: 5px;
+}
+  footer{
+    text-align:center;
+    background-color: var(--light_blue);
+    color: var(--rock_accent);
+    font-family: 'Roboto', sans-serif;
+    margin:0 auto;
+    border-radius:10px 10px 10px 10px;
+    padding:1.5%; 
+    }
+      #topic1 {}
+      #topic2 {}
+  div {}
+  aside {}
+  footer {}
+  
+  /* ----- Anchors ----- Text links */
+  a {}
+  a:link {}
+  a:hover {}
+  a:active {}
+  a:visited {}
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  nav {
+    text-align:center;
+    vertical-align: middle;
+    font-family: 'Roboto', sans-serif;
+    margin:.8% 0 1% 0;
+    padding:0;
+  }
+  nav a {
+    background-color:var(--rock_accent);
+    border:2px solid var(--rock_accent);
+    border-radius:10px; 
+    color:var(--light_blue);
+    font-size:1.1em;
+    font-weight:bolder;
+    margin:20px;
+    padding: 3px 20px 3px 20px;
+    text-decoration:none;
+  }
+  nav a:hover {
+    background-color:var(--light_blue);
+    color:var(--rock_accent);
+  }
+  nav.local{
+    text-align:center;
+    display:flex;
+    flex-flow: row wrap;
+    margin:.8% 0 1% 0;
+    padding:0;
+  }
+
+  nav.local a {
+    background-color:var(--light_blue);
+    border:2px solid var(--light_blue);
+    font-family: 'Roboto', sans-serif;
+    border-radius:10px; 
+    color:var(--rock_accent);
+    font-size:1.1em;
+    font-weight:bolder;
+    margin:20px;
+    padding: 3px 20px 3px 20px;
+    text-decoration:none;
+  }
+  nav.local a:hover {
+    background-color:var(--rock_accent);
+    color:var(--light_blue);
+  }
+  /*  -----  Typography  ----- */
+  p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {}
+  
+  h1, h2, h3, h4, h5, h6 {font-family: 'Roboto', sans-serif} 
+  h1 {}
+  h2 {}
+  h3 {}
+  h4 {}
+  h5 {}
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {font-family: 'Roboto', sans-serif}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table {
+    border-collapse:collapse;
+    width: 100%;
+    margin: 10 center;
+    align-items: center;
+  }
+  caption {
+    font-family: 'Roboto', sans-serif; 
+    border:5px solid var(--rock_accent); 
+    border-radius:10px 10px 0px 0px;
+    text-align: center;
+    color:var(--light_blue);
+    font-weight:bold;
+    padding:1%;
+    background-color: var(--rock_accent);
+  }
+  thead {
+    font-family: 'Roboto', sans-serif;
+    border-bottom:5px solid var(--med_blue); 
+    border-radius:10px 10px 0px 0px;
+    text-align: center;
+    color:var(--rock_accent);
+    font-weight:bold;
+    padding:10%;
+  }
+  tbody {
+    font-family: 'Open Sans', sans-serif;
+    border-bottom:5px solid var(--med_blue); 
+    border-radius:10px 10px 0px 0px;
+    text-align: center;
+    color:var(--rock_accent);
+    font-weight:bold;
+    padding:10%;
+  }
+  tfoot {}
+  tr {
+    background-color: var(--light_blue);
+    padding:1%;
+    text-align:center;
+    border-bottom:5px solid var(--med_blue); 
+    border-radius:10px 10px 10px 10px;
+  }
+  th {
+
+  }
+  td {
+    background-color: var(--light_blue);
+    padding:3%;
+    text-align:center;
+    border-bottom:5px solid var(--med_blue); 
+    border-radius:10px 10px 10px 10px;
+  }
+    td:nth-child(1) {}
+  colgroup {}
+  data {}
+  datalist {}
+  
+  
+  /*  ----- Form ----- */
+  form, button, input, select {
+    font-family: 'Open Sans', sans-serif;
+    font-size:90%;
+    border-radius:10px 10px 10px 10px;
+  }
+  fieldset {
+    border: 2px solid var(--dark_blue);
+    background-color: var(--light_blue);
+    margin-bottom: 3%;
+    border-radius:10px 10px 10px 10px;
+    padding: ;
+  }
+    legend {
+      color: var(--light_blue);
+      font-family:'Roboto', sans-serif;
+      background-color: var(--rock_accent);
+      border: 3px solid var(--rock_accent);
+      border-radius:10px 10px 10px 10px;
+      font-size: 110%;
+    }
+  label {
+    display: block;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 100%;
+    color: var(--rock_accent);
+  }
+  textarea{
+    width:80%;
+    height:175px;
+    padding:3%;
+    font-family: 'Open Sans', sans-serif;
+    font-size:100%;
+    border-radius:10px 10px 10px 10px;
+  }
+    button {
+      font-size:150%;
+      font-family: 'Roboto', sans-serif;
+      font-style: bold;
+      border-radius:10px 10px 10px 10px;
+      background-color: var(--rock_accent);
+      color: var(--light_blue);
+      border-color: var(--rock_accent);
+    }
+    input {
+      width: 80%;
+      padding: 3%;
+      font-size: 120%;
+    }
+    :focus {
+      background-color: var(--med_blue);
+    }
+    *:required {
+      border: 2px solid green
+    }
+    input:invalid {
+      border-radius:10px 10px 10px 10px;
+
+    }
+    input:valid {
+      border:2px solid var(--dark_blue);
+    }
+    input::placeholder {
+      color:darkgray;
+  }
+  .icon {
+    font-size: 50px;
+  }
+    output {}
+    meter {}
+    progress {}
+    select {}
+      optgroup {}
+      option {}
+    textarea {}
+  
+  /* ----- Media ----- */
+  figure {}
+    figcaption {}
+    figure img {}
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  .gallery {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .gallery figure {
+    width: 300px;
+    margin:.75%;
+    padding:0;
+    border:1px solid var(--rock_accent);
+    border-radius:10px; 
+    background-color: var(--dark_blue);
+  }
+  .gallery img {
+    width:100%;
+    border-radius:10px 10px 0px 0px; 
+  }
+  .gallery figcaption {
+    display:block;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding:3px;
+  }
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
+  

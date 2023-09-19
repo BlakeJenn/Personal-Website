@@ -1,0 +1,19 @@
+{
+  "name": "composers-backend",
+  "version": "2023",
+  "description": "A database of classical composers",
+  "main": "composers-controller.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon composers-controller.mjs"
+  },
+  "author": "Blake Jennings",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1",
+    "nodemon": "^2.0.20",
+    "rest": "^2.0.0"
+  }
+}

@@ -1,0 +1,82 @@
+### CREATE five documents.
+POST http://localhost:3000/composers HTTP/1.1
+content-type: application/json
+
+{
+    "composer": "Mozart",
+    "birthyear": "1756-01-27",
+    "era": 600
+}
+
+
+### CREATE 2
+POST http://localhost:3000/composers HTTP/1.1
+content-type: application/json
+
+{
+    "composer": "Bach",
+    "birthyear": "1685-03-31",
+    "era": 1128
+}
+
+### CREATE 3
+POST http://localhost:3000/composers HTTP/1.1
+content-type: application/json
+
+{
+    "composer": "Debussy",
+    "birthyear": "1862-08-11",
+    "era": 310
+}
+
+### CREATE 4
+POST http://localhost:3000/composers HTTP/1.1
+content-type: application/json
+
+{
+    "composer": "Stravinsky",
+    "birthyear": "1882-06-17",
+    "era": 120
+}
+
+### CREATE 5
+POST http://localhost:3000/composers HTTP/1.1
+content-type: application/json
+
+{
+    "composer": "Liszt",
+    "birthyear": "1811-10-22",
+    "era": 700
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/composers HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/composers/64d860411a8d88160af0bc9c HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the ID in the following request with one that exists
+### and update the year:
+PUT http://localhost:3000/composers/64d860411a8d88160af0bc9c HTTP/1.1
+content-type: application/json
+
+{
+    "composer": "Mozart",
+    "birthyear": "1992-05-11",
+    "era": 54
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/composers/64d860511a8d88160af0bc9e HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/composers HTTP/1.1
+
